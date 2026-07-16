@@ -1,0 +1,10 @@
+/vendor/
+/TestingProject/
+/.phpunit.cache/
+/exports/
+.DS_Store
+composer.lock
+*.csv
+*.xlsx
+*.docx
+*.pdf
