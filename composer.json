@@ -1,0 +1,50 @@
+{
+    "name": "db2file/db2file",
+    "description": "A framework-independent PHP library for exporting MySQL database records to CSV, XLSX, DOCX and PDF.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "mysql",
+        "pdo",
+        "database",
+        "export",
+        "csv",
+        "xlsx",
+        "docx",
+        "pdf"
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-pdo": "*",
+        "dompdf/dompdf": "^3.1",
+        "phpoffice/phpspreadsheet": "^5.9",
+        "phpoffice/phpword": "^1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "suggest": {
+        "ext-mysqli": "Required when using a mysqli connection instead of PDO."
+    },
+    "autoload": {
+        "psr-4": {
+            "Db2File\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Db2File\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-unit": "phpunit --testsuite unit",
+        "test-integration": "phpunit --testsuite integration"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

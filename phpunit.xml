@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+    bootstrap="vendor/autoload.php"
+    colors="true"
+    cacheDirectory=".phpunit.cache"
+    failOnRisky="true"
+    failOnWarning="true"
+>
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="integration">
+            <directory>tests/Integration</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <env name="DB2FILE_TEST_HOST" value="127.0.0.1"/>
+        <env name="DB2FILE_TEST_PORT" value="3306"/>
+        <env name="DB2FILE_TEST_DATABASE" value="db2file_test"/>
+        <env name="DB2FILE_TEST_USERNAME" value="root"/>
+        <env name="DB2FILE_TEST_PASSWORD" value=""/>
+    </php>
+</phpunit>
